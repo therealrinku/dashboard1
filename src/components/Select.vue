@@ -23,7 +23,7 @@ export default {
 select {
   border: solid 1px rgba(0, 0, 0, 0.2);
   padding: 7px 10px 7px 7px;
-  width: 350px;
+  width: 150px;
   outline: none;
   border-radius: 5px;
   background: white;
