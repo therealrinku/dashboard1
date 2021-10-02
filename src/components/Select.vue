@@ -1,7 +1,7 @@
 <template>
   <div>
     <p style="font-size:13px;margin-bottom:3px;">{{ label }}</p>
-    <select>
+    <select @change="Changed($event)">
       <option :key="option.id" v-for="option in options" :value="option.name">{{
         option.name || `None`
       }}</option>
@@ -15,6 +15,12 @@ export default {
   props: {
     label: String,
     options: Array,
+    onSelectChange: Function,
+  },
+  methods: {
+    Changed(e) {
+      this.onSelectChange(this.label, e.target.value);
+    },
   },
 };
 </script>
