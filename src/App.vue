@@ -13,7 +13,7 @@
       <Select
         label="Filter by type"
         :options="[
-          { id: 1, name: `None` },
+          { id: 1, name: `` },
           { id: 2, name: `Student` },
           { id: 3, name: `Waitlist` },
         ]"
@@ -22,7 +22,7 @@
       <Select
         label="Filter by postcode"
         :options="[
-          { id: 1, name: `None` },
+          { id: 1, name: `` },
           { id: 2, name: 2001 },
           { id: 3, name: 2000 },
         ]"
