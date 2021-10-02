@@ -34,4 +34,8 @@ select {
   border-radius: 5px;
   background: white;
 }
+
+select:focus {
+  box-shadow: 0 0 0 0.5pt green;
+}
 </style>
