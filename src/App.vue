@@ -13,18 +13,18 @@
       <Select
         label="Filter by type"
         :options="[
-          { id: 1, name: `Waitlist` },
+          { id: 1, name: `None` },
           { id: 2, name: `Student` },
-          { id: 3, name: `None` },
+          { id: 3, name: `Waitlist` },
         ]"
       />
       <span style="margin-left:5px;" />
       <Select
         label="Filter by postcode"
         :options="[
-          { id: 1, name: 2000 },
+          { id: 1, name: `None` },
           { id: 2, name: 2001 },
-          { id: 3, name: `None` },
+          { id: 3, name: 2000 },
         ]"
       />
       <span style="margin-left:5px;" />
