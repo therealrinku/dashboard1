@@ -45,6 +45,11 @@
     <h4>Enquiries(showing {{ filteredEnquiries.length }} enquiries)</h4>
     <Table :tableData="filteredEnquiries" />
   </div>
+
+  <div class="pagination-buttons">
+    <button>1</button>
+    <button>2</button>
+  </div>
 </template>
 
 <script>
@@ -127,6 +132,10 @@ export default {
   margin: auto;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .search-input {
   border: solid 1px rgba(0, 0, 0, 0.2);
   padding: 7px 10px 7px 7px;
@@ -148,5 +157,26 @@ export default {
   align-items: center;
   margin-top: -15px;
   flex-wrap: wrap;
+}
+
+.pagination-buttons {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-buttons button {
+  padding: 10px 15px;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  background: inherit;
+  border-radius: 5px;
+}
+
+.pagination-buttons button:hover {
+  border: solid 1px green;
+}
+
+.pagination-buttons button:last-child {
+  margin-left: 10px;
 }
 </style>
