@@ -2,7 +2,7 @@
   <div>
     <p style="font-size:13px;margin-bottom:3px;">{{ label }}</p>
     <select>
-      <option :key="option.id" v-for="option in options">{{
+      <option :key="option.id" v-for="option in options" :value="option.name">{{
         option.name
       }}</option>
     </select>
