@@ -47,8 +47,8 @@
   </div>
 
   <div class="pagination-buttons">
-    <button>1</button>
-    <button>2</button>
+    <button :disabled="pageNo === 1" @click="pageNo = 1">1</button>
+    <button :disabled="pageNo === 2" @click="pageNo = 2">2</button>
   </div>
 </template>
 
@@ -69,6 +69,7 @@ export default {
       filterByType: "",
       filterByPostcode: 0,
       sortBy: "Id",
+      pageNo: 1,
     };
   },
   methods: {
@@ -132,7 +133,7 @@ export default {
   margin: auto;
 }
 
-button:hover {
+button:hover:not(:disabled) {
   cursor: pointer;
 }
 
@@ -172,7 +173,7 @@ button:hover {
   border-radius: 5px;
 }
 
-.pagination-buttons button:hover {
+.pagination-buttons button:hover:not(:disabled) {
   border: solid 1px green;
 }
 
