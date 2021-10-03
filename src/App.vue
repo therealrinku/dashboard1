@@ -42,8 +42,14 @@
   </div>
 
   <div class="data-table">
-    <h4>Enquiries(showing {{ filteredEnquiries.length }} enquiries)</h4>
-    <Table :tableData="filteredEnquiries" />
+    <h4>Enquiries &#183; page {{ pageNo }}</h4>
+    <Table
+      :tableData="filteredEnquiries"
+      :sortBy="sortBy"
+      :filterByPostcode="filterByPostcode"
+      :filterByType="filterByType"
+      :searchQuery="searchQuery"
+    />
   </div>
 
   <div class="pagination-buttons">
@@ -83,42 +89,6 @@ export default {
       if (type === "Sort by") {
         this.sortBy = value;
       }
-    },
-
-    FilterSearchAndSort() {
-      this.filteredEnquiries = enquiries
-        .filter((enq) => enq.type.includes(this.filterByType))
-        .filter((enq) =>
-          enq.postcode.toString().includes(this.filterByPostcode)
-        )
-        .filter((enq) =>
-          enq.comments
-            .toLowerCase()
-            .includes(this.searchQuery.toLowerCase().trim())
-        )
-        .sort((a, b) => {
-          switch (this.sortBy) {
-            case "Id":
-              return a.id - b.id;
-            case "Type":
-              return a.type.localeCompare(b.type);
-          }
-        });
-    },
-  },
-
-  watch: {
-    searchQuery: function() {
-      this.FilterSearchAndSort();
-    },
-    filterByType: function() {
-      this.FilterSearchAndSort();
-    },
-    filterByPostcode: function() {
-      this.FilterSearchAndSort();
-    },
-    sortBy: function() {
-      this.FilterSearchAndSort();
     },
   },
 };

@@ -6,16 +6,34 @@
     "type": "Waitlist"
   },
   {
+    "comments": "The world’s longest place name has 85 letters & is located in New  Zealand.",
+    "id": 39454,
+    "postcode": 2000,
+    "type": "Student"
+  },
+  {
     "comments": "Egg yolks are one of the few foods that naturally contain Vitamin  D.",
     "id": 39436,
     "postcode": 2001,
     "type": "Waitlist"
   },
   {
+    "comments": "In general, people tend to read as much as 10% slower from a  screen than from paper.",
+    "id": 39453,
+    "postcode": 2001,
+    "type": "Student"
+  },
+  {
     "comments": "Peaches are the third most popular fruit grown in America.",
     "id": 39437,
     "postcode": 2000,
     "type": "Waitlist"
+  },
+  {
+    "comments": "The first movie ever to put out a motion-picture soundtrack was  Snow White and the Seven Dwarves.",
+    "id": 39452,
+    "postcode": 2000,
+    "type": "Student"
   },
   {
     "comments": "The fear of cooking is known as Mageirocophobia and is a  recognized phobia.",
@@ -99,24 +117,6 @@
     "comments": "A standard 12oz jar of honey take 864 bees to produce.",
     "id": 39451,
     "postcode": 2001,
-    "type": "Student"
-  },
-  {
-    "comments": "The first movie ever to put out a motion-picture soundtrack was  Snow White and the Seven Dwarves.",
-    "id": 39452,
-    "postcode": 2000,
-    "type": "Student"
-  },
-  {
-    "comments": "In general, people tend to read as much as 10% slower from a  screen than from paper.",
-    "id": 39453,
-    "postcode": 2001,
-    "type": "Student"
-  },
-  {
-    "comments": "The world’s longest place name has 85 letters & is located in New  Zealand.",
-    "id": 39454,
-    "postcode": 2000,
     "type": "Student"
   }
 ]

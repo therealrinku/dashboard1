@@ -9,7 +9,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="data in tableData" :key="data.id">
+      <tr v-for="data in sortedTableData()" :key="data.id">
         <td>{{ data.id }}</td>
         <td>{{ data.postcode }}</td>
         <td>{{ data.type }}</td>
@@ -24,6 +24,32 @@ export default {
   name: "Table",
   props: {
     tableData: Array,
+    filterByType: String,
+    filterByPostcode: Number,
+    sortBy: String,
+    searchQuery: String,
+  },
+  methods: {
+    sortedTableData() {
+      return this.tableData
+        .filter((enq) => enq.type.includes(this.filterByType))
+        .filter((enq) =>
+          enq.postcode.toString().includes(this.filterByPostcode)
+        )
+        .filter((enq) =>
+          enq.comments
+            .toLowerCase()
+            .includes(this.searchQuery.toLowerCase().trim())
+        )
+        .sort((a, b) => {
+          switch (this.sortBy) {
+            case "Id":
+              return a.id - b.id;
+            case "Type":
+              return a.type.localeCompare(b.type);
+          }
+        });
+    },
   },
 };
 </script>
