@@ -44,7 +44,7 @@
   <div class="data-table">
     <h4>Enquiries &#183; page {{ pageNo }}</h4>
     <Table
-      :tableData="filteredEnquiries"
+      :tableData="enquiries"
       :sortBy="sortBy"
       :filterByPostcode="filterByPostcode"
       :filterByType="filterByType"
@@ -61,9 +61,7 @@
 <script>
 import Select from "./components/Select.vue";
 import Table from "./components/Table.vue";
-import enquiries from "./data/enquiries.json";
-
-const Enquiries = enquiries.sort((a, b) => a.id - b.id);
+import data from "./data/enquiries.json";
 
 export default {
   name: "App",
@@ -71,7 +69,7 @@ export default {
   data() {
     return {
       searchQuery: "",
-      filteredEnquiries: Enquiries,
+      enquiries: data.slice(0, 10).sort((a, b) => a.id - b.id),
       filterByType: "",
       filterByPostcode: 0,
       sortBy: "Id",
@@ -88,6 +86,15 @@ export default {
       }
       if (type === "Sort by") {
         this.sortBy = value;
+      }
+    },
+  },
+  watch: {
+    pageNo: function() {
+      if (this.pageNo === 1) {
+        this.enquiries = data.slice(0, 10);
+      } else {
+        this.enquiries = data.slice(10);
       }
     },
   },
