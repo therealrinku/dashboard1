@@ -1,10 +1,7 @@
 # dashboard
 
 ## Summary
-I am new to vue.js . so even if it was small project, it took me little more time because I had to learn some fundamentals of vue.js first.
-But I have completed this project in 7-10 hours of total time spent in a span of 3 days because of some issues.
-
-I think this project can be improved but considering I was new to Vue.js, I think I have done a decent job.
+vue js app
 
 ## Project Structure
 Pages:App.vue
